@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>information details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/invoice.css">
+    <link rel="stylesheet" href="css/loader.css">
+</head>
+<body>
+    <div class="load" id="loader">
+        <span class="loader"></span>
+    </div>    
+    <section>
+        <div class="invoice">
+            <h1 style="text-transform: capitalize;">information details</h1>
+            <div class="header">
+                <div class="date">
+                    <table>
+                        <tr>
+                            <td>date now: </td>
+                            <td class="date-value" id="dateNow"></td>
+                        </tr>
+                        <tr>
+                            <td>date registaration: </td>
+                            <td class="date-value" id="dateNow">27 nov 2023 5:30 pm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="invoice_row">
+                    <div class="logo">
+                        <img src="images/logo/logo.png" alt="">
+                    </div>
+                    <div class="profile-picture">
+                        <img src="images/profile/profile.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="invoice_content">
+                <div class="basic-data">
+                    <p class="full-name"><span>Full Name:</span> Eng. rewas safwat lotfy</p>
+                    <p class="full-name"><span>Mother's First Name:</span> mmmm </p>
+                    <p class="full-name"><span>Mother's First Name in aravic:</span> رويس </p>
+                </div>
+                <div class="invoice_table">
+                    <!-- <div class="invoice_table_head">
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Field</div>
+                            <div class="invoice_col">Data</div>
+                        </div>
+                    </div> -->
+                    <div class="invoice_table_body">
+                        <h3>Identity</h3>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">nationality</div>
+                            <div class="invoice_col">user nationality</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Id / Passort Number</div>
+                            <div class="invoice_col">user id</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Birth date</div>
+                            <div class="invoice_col">user Birth date</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">gender</div>
+                            <div class="invoice_col">user gender</div>
+                        </div>
+                        <!--  @if (gender == 'male') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Military service</div>
+                            <div class="invoice_col">user Military service</div>
+                        </div>
+                        <!--  @endif -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Religion</div>
+                            <div class="invoice_col">user Religion</div>
+                        </div>
+                    </div>
+                    <div class="invoice_table_body">
+                        <h3>Martial status</h3>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">status</div>
+                            <div class="invoice_col">user status</div>
+                        </div>
+                        <!--  @if (number_of_dependencies > 0) -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Number of dependencies</div>
+                            <div class="invoice_col">user Number of dependencies</div>
+                        </div>
+                        <!--  @endif -->
+                    </div>
+                    <div class="invoice_table_body">
+                        <h3>Address</h3>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Type of residence</div>
+                            <div class="invoice_col">user Type of residence</div>
+                        </div>
+                         <!--  @if (type_of_residence != 'Onwer') -->
+                         <div class="invoice_row">
+                             <div class="invoice_col invoice_col_field">Rent value/month</div>
+                             <div class="invoice_col">user Rent value/month</div>
+                        </div>
+                         <div class="invoice_row">
+                             <div class="invoice_col invoice_col_field">Rent value/year</div>
+                             <div class="invoice_col">user Rent value/year</div>
+                        </div>
+                        <!--  @endif -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Apartment Number</div>
+                            <div class="invoice_col">user Apartment Number</div>
+                       </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Level Number</div>
+                            <div class="invoice_col">user Level Number</div>
+                       </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Building Number</div>
+                            <div class="invoice_col">user Building Number</div>
+                       </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Street name/Number</div>
+                            <div class="invoice_col">user Street name/Number</div>
+                       </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">District / Village</div>
+                            <div class="invoice_col">user District / Village</div>
+                       </div>
+                       <div class="invoice_row">
+                           <div class="invoice_col invoice_col_field">Region / Center</div>
+                           <div class="invoice_col">user Region / Center</div>
+                       </div>
+                       <div class="invoice_row">
+                           <div class="invoice_col invoice_col_field">Country</div>
+                           <div class="invoice_col">user Country</div>
+                       </div>
+                       <div class="invoice_row">
+                           <div class="invoice_col invoice_col_field">Governorate</div>
+                           <div class="invoice_col">user Governorate</div>
+                       </div>
+                           <!--  @if (nearest_landmark != '') -->
+                           <div class="invoice_row">
+                               <div class="invoice_col invoice_col_field">Nearest landmark</div>
+                               <div class="invoice_col">user Nearest landmark</div>
+                       </div>
+                       <!--  @endif -->
+                    </div>
+                    <div class="page-break"></div>
+                    <div class="invoice_table_body">
+                        <h3>Contact</h3>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Telephone</div>
+                            <div class="invoice_col">user Telephone</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Phone number</div>
+                            <div class="invoice_col">user Phone number</div>
+                       </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Whatsapp number</div>
+                            <div class="invoice_col">user Whatsapp number</div>
+                       </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Postal code</div>
+                            <div class="invoice_col">user Postal code</div>
+                       </div>
+                    </div>
+                    <div class="invoice_table_body">
+                        <h3>Education</h3>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Faculty/Program</div>
+                            <div class="invoice_col">user Faculty/Program</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">University/Institute/school</div>
+                            <div class="invoice_col">user University/Institute/school</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Degree</div>
+                            <div class="invoice_col">user Degree</div>
+                       </div>
+                       <!--  @if (degree == 'Student'||degree == 'Undergraduate') -->
+                       <div class="invoice_row">
+                           <div class="invoice_col invoice_col_field">current level</div>
+                           <div class="invoice_col">user current level</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (degree != 'Student'&&degree != 'Undergraduate'&&degree!='Other') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">awarding year</div>
+                            <div class="invoice_col">user awarding year</div>
+                        </div>
+                        <!--  @endif -->
+                    </div>
+                    <div class="invoice_table_body">
+                        <h3>Work</h3>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Job title</div>
+                            <div class="invoice_col">user Job title</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Job type</div>
+                            <div class="invoice_col">user Job type</div>
+                       </div>
+                       <!--  @if (employment_year&&employment_year>0) -->
+                       <div class="invoice_row">
+                           <div class="invoice_col invoice_col_field">Employment year</div>
+                           <div class="invoice_col">user Employment year</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (job_loaction&&job_loaction!='') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">job loaction</div>
+                            <div class="invoice_col">user job loaction</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (work_place&&work_place!='') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">work place</div>
+                            <div class="invoice_col">user work place</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (work_address&&work_address!='') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">work address</div>
+                            <div class="invoice_col">user work addressssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (work_telephone&&work_telephone>0) -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">work telephone</div>
+                            <div class="invoice_col">user work telephone</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (work_email&&work_email!='') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">work email</div>
+                            <div class="invoice_col">user work email</div>
+                        </div>
+                        <!--  @endif -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Working hours</div>
+                            <div class="invoice_col">user Working hours</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">From</div>
+                            <div class="invoice_col">user working From</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">to</div>
+                            <div class="invoice_col">user working to</div>
+                        </div>
+                        <!--  @if (insurance_number&&insurance_number>0) -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Insurance Number</div>
+                            <div class="invoice_col">user Insurance Number</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (job_type == 'Freelance') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Average Income</div>
+                            <div class="invoice_col">user Average Income</div>
+                        </div>
+                        <!--  @else -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Salary / Total Income (Monthly)</div>
+                            <div class="invoice_col">user Salary / Total Income (Monthly)</div>
+                        </div>
+                        <!--  @endif -->
+                    </div>
+                    <div class="invoice_table_body">
+                        <h3>Finance & Banking</h3>
+                        
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Payment type</div>
+                            <div class="invoice_col">user Payment type</div>
+                        </div>
+                        <!--  @if (bank_name) -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Bank Name</div>
+                            <div class="invoice_col">user Bank Name</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (payment_type=='Bank Account') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Bank account number</div>
+                            <div class="invoice_col">user Bank account number</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (payment_type=='Instapay') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">ID</div>
+                            <div class="invoice_col">user ID</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (payment_type='Mobile Wallet') -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Phone number</div>
+                            <div class="invoice_col">user Phone number</div>
+                        </div>
+                        <!--  @endif -->
+                        <!--  @if (iban) -->
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Iban</div>
+                            <div class="invoice_col">user Iban</div>
+                        </div>
+                        <!--  @endif -->
+                    </div>
+                    <div class="page-break"></div>
+                    <div class="invoice_table_body">
+                        <h3>System Information</h3>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Plan</div>
+                            <div class="invoice_col">user Plan</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">email</div>
+                            <div class="invoice_col">user email</div>
+                        </div>
+                        <div class="invoice_row">
+                            <div class="invoice_col invoice_col_field">Privacy & Policy</div>
+                            <div class="invoice_col">agree</div>
+                        </div>
+                    </div>
+                    <div class="invoice_table_note">
+                        <h3 style="display: flex;justify-content: space-between;">
+                            <span>Note:</span>
+                            <span style="direction: rtl;">ملاحظة:</span>
+                        </h3>
+                        <p>
+                            By using our application, you agree to our privacy policy, 
+                            ensuring the confidentiality of your personal information. 
+                            We are committed to safeguarding your privacy and maintaining
+                            the security of your data
+                        </p>
+                        <p style="direction: rtl;">
+                            باستخدام تطبيقنا، توافق على سياسة الخصوصية الخاصة بنا، مما يضمن سرية معلوماتك الشخصية.
+                             نحن ملتزمون بحماية خصوصيتك وضمان أمان بياناتك.
+                        </p>
+                    </div>
+                    <div class="invoice_table_foot">
+                        <div class="signature">
+                            <h4>client signature</h4>
+                            <h4>توقيع العميل</h4>
+                        </div>
+                        <div class="signature">
+                            <h4>manager signature</h4>
+                            <h4>توقيع المدير</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+                <button id="downloadButton" class="btn">Download as PDF</button>
+                <button id="previewButton" class="btn2">Preview print</button>
+        </div>
+    </section>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="js/invoice.js"></script>
+</body>
+</html>

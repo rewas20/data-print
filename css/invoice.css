@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: #ccc;
+    padding: 1px;
+}
+
+.invoice {
+    width: 600px;
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px 30px;
+    font-size: 12px;
+}
+
+.invoice_row {
+    display: flex;
+}
+
+.invoice .header .invoice_row {
+    justify-content: space-between;
+    margin-bottom: 30px;
+    
+}
+
+.invoice .header .invoice_row  .logo {
+    width: 60px;
+}
+
+.invoice .header .invoice_row  .logo img {
+    width: 100%;
+}
+
+/* table dates */
+.invoice .header .date table {
+    margin-bottom: 10px;
+}
+.invoice .header .date table td{
+    font-size: 10px;
+}
+
+.invoice .header .date table td input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+
+}
+
+.invoice .header .date table td input:focus{
+    outline: 1px solid #ccc;
+}
+
+
+/* profile picture */
+.invoice .header .invoice_row .profile-picture{
+    width: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.invoice .header .invoice_row .profile-picture img {
+    width: 100%;
+}
+
+
+/* invoice-content */
+.invoice .invoice_content .basic-data .full-name {
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.invoice .invoice_content .basic-data .full-name span {
+    font-weight: 700;
+}
+
+.invoice .invoice_content .invoice_table .invoice_table_head {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+.invoice .invoice_content .invoice_table .invoice_col {
+    width: calc(100% - 200px);
+    text-transform: capitalize;
+}
+.invoice .invoice_content .invoice_table .invoice_table_body .invoice_row {
+    margin: 10px 0;
+    max-width: 100%;
+    word-break: break-all;
+}
+.invoice .invoice_content .invoice_table .invoice_table_body .invoice_col_field {
+   font-weight: 500;
+   width: 180px;
+}
+
+
+h3 {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+
+.invoice_content .invoice_table .invoice_table_foot {
+    margin: 100px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .invoice_content .invoice_table .invoice_table_note {
+    margin: 200px 0 100px;
+} */
+
+.invoice_content .invoice_table .invoice_table_foot .signature {
+    font-weight: 700;
+    text-transform: capitalize;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.btn,.btn2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 20px 50px;
+    border: 1px solid rgb(18, 117, 215);
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: rgb(18, 117, 215);
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: rgb(254, 129, 107);
+    border-color: rgb(254, 129, 107);
+    right: 0;
+    left: auto;
+}
+
+.btn2:hover {
+    background-color: rgb(200, 101, 84);
+    border-color: rgb(200, 101, 84);
+}
+
+.btn:hover {
+    background-color: rgb(14, 88, 162);
+    border-color:  rgb(14, 88, 162);
+}
+
+.hideBtn{
+    display: none;
+}
+
+@media (max-width:1050px) {
+    .btn, .btn2 {
+        position: relative;
+        margin: 0;
+    }
+    
+}
+@media (max-width:680px) {
+    .invoice {
+        width: 100%;
+        margin: 0;
+    }
+    
+}
+
+@media print {
+    .btn,.btn2 {
+        display: none;
+    }
+    
+}
+
+@page {
+    size: A4;
+}
+
+@page:right {
+    margin-right: 1cm;
+}
+
+@page :left {
+    margin-left: 1cm;
+/*     bottom-right {
+        content: "Page " counter(page) " of " counter(pages) ;
+    } */
+}
+
+
+.page-break {
+    page-break-before: always;
+    
+}
